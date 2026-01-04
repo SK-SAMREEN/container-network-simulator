@@ -1,13 +1,13 @@
 # Container Network Simulator
 
-## 📌 Project Overview
+## Project Overview
 This project demonstrates how Docker containers communicate with each other using Docker networks and how network isolation works.
 
 The goal is to understand Docker networking practically, not just theoretically.
 
 ---
 
-## 🧠 What This Project Demonstrates
+## What This Project Demonstrates
 - Communication between containers in the same Docker network
 - Isolation between containers in different Docker networks
 - Difference between ICMP (ping) and TCP (HTTP) traffic
@@ -16,7 +16,7 @@ The goal is to understand Docker networking practically, not just theoretically.
 
 ---
 
-## 🛠️ Technologies Used
+##Technologies Used
 - Docker
 - Linux (Alpine)
 - Bash scripting
@@ -24,13 +24,13 @@ The goal is to understand Docker networking practically, not just theoretically.
 
 ---
 
-## 🌐 Network Architecture
+## Network Architecture
 - **bridge_network**: Allows container-to-container communication
 - **isolated_network**: Prevents communication with other networks
 
 ---
 
-## 🧩 Containers Used
+## Containers Used
 | Container | Network | Purpose |
 |--------|--------|--------|
 | c1 | bridge_network | Client container |
@@ -39,25 +39,25 @@ The goal is to understand Docker networking practically, not just theoretically.
 
 ---
 
-## 🔬 Tests Performed
+## Tests Performed
 
-### 1️⃣ Ping Test (ICMP)
+###1 Ping Test (ICMP)
 - `c1 → c2` ✅ Success
 - `c1 → c3` ❌ Failed (expected)
 
-### 2️⃣ HTTP Test (TCP)
+### 2 HTTP Test (TCP)
 - Web server started in `c2` on port `8080`
 - Accessed from `c1` using `wget`
 - Response received (404 or content confirms connectivity)
 
 ---
 
-## 🧪 Bash Automation
+## Bash Automation
 A Bash script was used to automate ping tests and log the results.
 
 ---
 
-## 🔐 Key Learnings
+## Key Learnings
 - Containers can communicate only within the same Docker network
 - Docker provides built-in DNS for container name resolution
 - Network isolation improves security
@@ -65,7 +65,7 @@ A Bash script was used to automate ping tests and log the results.
 
 ---
 
-## 🚀 How to Run This Project
+## How to Run This Project
 
 ```bash
 # Create networks
